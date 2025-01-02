@@ -31,7 +31,7 @@ public class Week9{
             System.out.println("4. Save and Exit");
             System.out.print("Choose an option: ");
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine(); 
 
             switch (choice) {
                 case 1 -> {
