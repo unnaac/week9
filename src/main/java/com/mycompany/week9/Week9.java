@@ -20,7 +20,7 @@ public class Week9{
         try {
             monsterList = MonsterList.loadFromFile(filename);
         } catch (IOException | ClassNotFoundException e) {
-            System.out.println("No previous data found. Starting fresh.");
+            System.out.println("Tidak ada data ditemukan, membuat baru");
         }
 
         while (true) {
@@ -35,7 +35,7 @@ public class Week9{
 
             switch (choice) {
                 case 1 -> {
-                    System.out.print("Enter name: ");
+                    System.out.print("Masukan Nama: ");
                     String smName = scanner.nextLine();
                     System.out.print("Enter species: ");
                     String smSpecies = scanner.nextLine();
@@ -50,7 +50,7 @@ public class Week9{
                     monsterList.addSmallMonster(sm);
                 }
                 case 2 -> {
-                    System.out.print("Enter name: ");
+                    System.out.print("Masukan Nama: ");
                     String lmName = scanner.nextLine();
                     System.out.print("Enter species: ");
                     String lmSpecies = scanner.nextLine();
@@ -86,13 +86,13 @@ public class Week9{
                 case 4 -> {
                     try {
                         monsterList.saveToFile(filename);
-                        System.out.println("Data saved. Exiting...");
+                        System.out.println("Data disimpan dan keluar ...");
                         return;
                     } catch (IOException e) {
-                        System.out.println("Failed to save data.");
+                        System.out.println("Gagal menyimpan data!!");
                     }
                 }
-                default -> System.out.println("Invalid choice. Try again.");
+                default -> System.out.println("Tidak ada pilihan itu, coba pilihan yang tersedia yak");
             }
         }
     }
